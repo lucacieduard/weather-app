@@ -1,7 +1,13 @@
-import "./navbar.css";
+import "./navBar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
-	return <>Navbar</>;
+	return (
+		<div className="navBar">
+			<FontAwesomeIcon icon={faMagnifyingGlass} className="search" />{" "}
+		</div>
+	);
 };
 
 export default NavBar;
