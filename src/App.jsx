@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Single from "./pages/City/Single";
+import Home from "./pages/Home/Home";
 
 function App() {
 	return (
@@ -8,7 +9,9 @@ function App() {
 			<Routes>
 				<Route path="/">
 					<Route index element={<Home />} />
-					<Route path="test" element={<p>test</p>} />
+					<Route path=":city">
+						<Route path="now" element={<Single />} />
+					</Route>
 				</Route>
 				<Route path="*" element={<p>no match</p>} />
 			</Routes>
