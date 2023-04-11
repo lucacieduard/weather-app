@@ -1,4 +1,4 @@
-import "./single.css";
+import classes from "./single.module.css";
 import { useParams } from "react-router-dom";
 
 const Single = () => {

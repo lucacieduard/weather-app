@@ -1,13 +1,12 @@
-import "./home.css";
+import classes from "./home.module.css";
 import NavBar from "../../components/navbar/NavBar";
-import { useParams } from "react-router-dom";
+import Sidebar from "../../components/sidebar/Sidebar";
 const Home = () => {
-	const params = useParams();
-
 	return (
-		<>
+		<div className={classes.page}>
+			<Sidebar />
 			<NavBar />
-		</>
+		</div>
 	);
 };
 

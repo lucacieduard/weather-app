@@ -1,4 +1,4 @@
-import "./App.css";
+import classes from "./App.module.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Single from "./pages/City/Single";
 import Home from "./pages/Home/Home";

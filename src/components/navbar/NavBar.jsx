@@ -1,11 +1,17 @@
-import "./navBar.css";
+import classes from "./navBar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
 	return (
-		<div className="navBar">
-			<FontAwesomeIcon icon={faEnvelope} />
+		<div className={classes.navBar}>
+			<div className={classes.date}>
+				Luni<span>4 ianuarie, 2023</span>
+			</div>
+			<div className={classes.search}>
+				<FontAwesomeIcon icon={faMagnifyingGlass} />
+				<input type="text" placeholder="Caută un oraș" />
+			</div>
 		</div>
 	);
 };
