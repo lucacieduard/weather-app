@@ -93,6 +93,12 @@
 	padding: 0.5rem 1rem;
 }
 
+.option:hover {
+	color: #2f69fd;
+	background-color: #eaeaea;
+	cursor: pointer;
+}
+
 .x {
 	margin-top: 0.5rem;
 	margin-right: 0.5rem;
