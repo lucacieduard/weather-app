@@ -1,7 +1,7 @@
 .navBar {
 	flex: 6;
 	background-color: #ffffff;
-	height: 80px;
+	height: 70px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -12,6 +12,12 @@
 .date {
 	display: flex;
 	flex-direction: column;
+}
+
+.date_color {
+	color: #2f69fd;
+	font-weight: 600;
+	font-size: 1.1rem;
 }
 
 .search {
@@ -26,10 +32,65 @@
 .search input {
 	border: none;
 	background-color: transparent;
-	width: 200px;
+	width: 170px;
 	font-size: 1rem;
 }
 
 .search input:focus {
 	outline: none;
+}
+
+.enter_icon:hover {
+	cursor: pointer;
+}
+
+.navbar_right {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-right: 50px;
+}
+
+.icon_navbar {
+	position: relative;
+	background-color: #eef2f3;
+	width: 35px;
+	height: 35px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon_navbar:hover {
+	cursor: pointer;
+}
+
+.use_location_message {
+	position: absolute;
+	top: 40px;
+	background-color: white;
+	border: 1px solid #eef2f3;
+	width: fit-content;
+	border-radius: 5px;
+	padding: 0.2rem 1rem;
+}
+
+.profile_list {
+	position: absolute;
+	top: 40px;
+	width: 150px;
+	background-color: white;
+	border: 1px solid #eef2f3;
+}
+
+.icon_navbar {
+	margin-right: 50px;
+}
+
+.profile_name {
+	padding: 0.5rem 1rem;
+}
+.option {
+	padding: 0.5rem 1rem;
 }
