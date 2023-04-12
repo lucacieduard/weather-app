@@ -46,11 +46,17 @@
 	border-bottom: 1.5px solid #cbcbcb;
 }
 
-li:hover {
+.sidebar_navigation li:hover {
 	color: #2f69fd;
 	background-color: #eaeaea;
 	cursor: pointer;
 }
+.sidebar_footer li:hover {
+	color: #2f69fd;
+	background-color: #eaeaea;
+	cursor: pointer;
+}
+
 .sidebar_footer {
 	flex: 1;
 	margin-bottom: 2rem;
