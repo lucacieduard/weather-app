@@ -40,9 +40,7 @@ const NavBar = () => {
 				className={classes.icon_navbar}
 				onMouseEnter={() => setShowProfileMenu(true)}
 				onMouseLeave={() => {
-					setTimeout(() => {
-						setShowProfileMenu(false);
-					}, 500);
+					setShowProfileMenu(false);
 				}}
 			>
 				<FontAwesomeIcon icon={faUser} />
