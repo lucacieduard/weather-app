@@ -1,5 +1,7 @@
 # weather-app
 
-UI inspiration : https://www.figma.com/file/rbtX4QrEa8Rhgtli9qdLu7/Weather-Dashboard-(Community)?node-id=0-1&t=Gb6gGlef1fYXHfTf-0
+UI inspiration :
+https://dribbble.com/shots/9402657-Weather-Forecast
+https://dribbble.com/shots/18425258-Srawana-Weather-Dashboard-Design
 
 # Live : https://weather-app.eduardlucaci.ro/

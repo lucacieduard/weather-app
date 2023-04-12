@@ -5,6 +5,7 @@ import {
 	faArrowRight,
 	faUser,
 	faLocationPin,
+	faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
@@ -36,17 +37,22 @@ const NavBar = () => {
 					)}
 				</div>
 			</div>
-			<div
-				className={classes.icon_navbar}
-				onMouseEnter={() => setShowProfileMenu(true)}
-				onMouseLeave={() => {
-					setShowProfileMenu(false);
-				}}
-			>
-				<FontAwesomeIcon icon={faUser} />
+			<div className={classes.icon_navbar}>
+				<FontAwesomeIcon
+					icon={faUser}
+					className={classes.icon_navbar_hover}
+					onClick={() => setShowProfileMenu(true)}
+				/>
 				{showProfileMenu && (
 					<ul className={classes.profile_list}>
+						<FontAwesomeIcon
+							icon={faXmark}
+							className={classes.x}
+							onClick={() => setShowProfileMenu(false)}
+						/>
 						<h4 className={classes.profile_name}>Eduard</h4>
+						<li className={classes.option}>Contul meu</li>
+						<li className={classes.option}>Orașe salvate</li>
 						<li className={classes.option}>Deconectare</li>
 					</ul>
 				)}
