@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 const MapC = (props) => {
 	function SetViewOnClick(props) {
 		const map = useMap();
-		map.setView(props.coords, map.getZoom());
+		map.flyTo(props.coords, 12);
 
 		return null;
 	}
