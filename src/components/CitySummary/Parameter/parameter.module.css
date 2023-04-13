@@ -1,0 +1,33 @@
+.summary_parameter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #eef2f3;
+	padding: 1rem 0.5rem;
+	border-radius: 10px;
+	gap: 20px;
+	border-radius: 5px;
+	width: 180px;
+}
+
+.parameter_logo {
+	width: 30px;
+	height: 30px;
+	color: #2f69fd;
+}
+
+.parameter_name {
+	color: #818181;
+	font-size: 0.9rem;
+}
+
+.parameter_info {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.parameter_value {
+	color: #213a62;
+	font-size: 1.5rem;
+}
