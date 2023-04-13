@@ -3,10 +3,20 @@
 	flex-direction: column;
 	width: 180px;
 }
+.card_title {
+	text-align: center;
+	margin-top: 0.5rem;
+	font-weight: 600;
+}
 
 .card:hover {
 	transform: translateY(-17px);
 	transition: all 0.5s;
+	color: #2f69fd;
+}
+
+.active {
+	transform: translateY(-17px);
 	color: #2f69fd;
 }
 .card_image {
@@ -14,10 +24,4 @@
 	height: 140px;
 	object-fit: cover;
 	border-radius: 25px;
-}
-
-.card_title {
-	text-align: center;
-	margin-top: 0.5rem;
-	font-weight: 600;
 }
