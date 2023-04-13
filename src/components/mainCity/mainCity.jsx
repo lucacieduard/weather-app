@@ -5,28 +5,36 @@ import cluj from "../../assets/image/cluj.jpg";
 import iasi from "../../assets/image/iasi.jpg";
 import sibiu from "../../assets/image/sibiu.jpg";
 import brasov from "../../assets/image/brasov.jpg";
+import { useState } from "react";
+import CitySummary from "../CitySummary/CitySummary";
 
 const MainCity = () => {
+	const [activeCity, setActiveCity] = useState("București");
 	return (
 		<div className={classes.mainCity_container}>
 			<h1 className={classes.mainCity_title}>Orașe populare</h1>
 			<ul className={classes.mainCity_list}>
-				<li>
-					<CardCity cityName="București" image={bucuresti} />
+				<li onClick={() => setActiveCity("București")}>
+					<CardCity
+						cityName="București"
+						image={bucuresti}
+						active={activeCity}
+					/>
 				</li>
-				<li>
-					<CardCity cityName="Cluj Napoca" image={cluj} />
+				<li onClick={() => setActiveCity("Cluj Napoca")}>
+					<CardCity cityName="Cluj Napoca" image={cluj} active={activeCity} />
 				</li>
-				<li>
-					<CardCity cityName="Brașov" image={brasov} />
+				<li onClick={() => setActiveCity("Brașov")}>
+					<CardCity cityName="Brașov" image={brasov} active={activeCity} />
 				</li>
-				<li>
-					<CardCity cityName="Iași" image={iasi} />
+				<li onClick={() => setActiveCity("Iași")}>
+					<CardCity cityName="Iași" image={iasi} active={activeCity} />
 				</li>
-				<li>
-					<CardCity cityName="Sibiu" image={sibiu} />
+				<li onClick={() => setActiveCity("Sibiu")}>
+					<CardCity cityName="Sibiu" image={sibiu} active={activeCity} />
 				</li>
 			</ul>
+			<CitySummary city={activeCity} />
 		</div>
 	);
 };

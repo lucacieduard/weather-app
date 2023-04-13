@@ -4,6 +4,7 @@
 .mainCity_title {
 	font-size: 1.6rem;
 	margin-top: 0.5rem;
+	color: #213a62;
 }
 .mainCity_list {
 	display: flex;
