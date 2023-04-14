@@ -1,3 +1,4 @@
 .main {
-	padding: 1rem 2rem;
+	max-height: 100vh;
+	overflow-y: auto;
 }
