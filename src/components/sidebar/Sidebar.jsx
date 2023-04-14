@@ -20,7 +20,7 @@ const Sidebar = () => {
 				<ul className={classes.sidebar_navigation}>
 					<NavLink
 						to="/"
-						style={{ textDecoration: "none" }}
+						style={{ textDecoration: "none", color: "inherit" }}
 						className={({ isActive, isPending }) => {
 							console.log(isActive);
 							return isActive ? `${classes.activeLink}` : "";
