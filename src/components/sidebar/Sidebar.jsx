@@ -7,6 +7,7 @@ import {
 	faArrowRightToBracket,
 	faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link, NavLink } from "react-router-dom";
 
 const Sidebar = () => {
 	return (
@@ -17,10 +18,19 @@ const Sidebar = () => {
 			</div>
 			<div className={classes.sidebar_content}>
 				<ul className={classes.sidebar_navigation}>
-					<li>
-						<FontAwesomeIcon icon={faTableCellsLarge} />
-						<p>Acasă</p>
-					</li>
+					<NavLink
+						to="/"
+						style={{ textDecoration: "none" }}
+						className={({ isActive, isPending }) => {
+							console.log(isActive);
+							return isActive ? `${classes.activeLink}` : "";
+						}}
+					>
+						<li>
+							<FontAwesomeIcon icon={faTableCellsLarge} />
+							<p>Acasă</p>
+						</li>
+					</NavLink>
 					<li>
 						<FontAwesomeIcon icon={faBookmark} />
 						<p>Orase salvate</p>

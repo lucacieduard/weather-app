@@ -70,3 +70,7 @@
 	font-size: 1.1rem;
 	padding: 1rem;
 }
+
+.activeLink {
+	border-left: 8px solid #2f69fd;
+}

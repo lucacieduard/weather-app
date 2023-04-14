@@ -8,6 +8,7 @@ import {
 	faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import MapC from "../Map/Map";
+import { Link } from "react-router-dom";
 
 const CitySummary = (props) => {
 	const coords = {
@@ -73,10 +74,14 @@ const CitySummary = (props) => {
 						}
 					/>
 					<p className={classes.codeMessage}>Status : Code message</p>
-					<button className={classes.button}>
+					<Link
+						to={`/${props.city}/acum`}
+						style={{ textDecoration: "none" }}
+						className={classes.button}
+					>
 						<span>Vremea detaliata {props.city}</span>
 						<FontAwesomeIcon icon={faArrowRight} />
-					</button>
+					</Link>
 				</div>
 			</div>
 			<div className={classes.map}>
