@@ -19,7 +19,7 @@ const Sidebar = () => {
 				<ul className={classes.sidebar_navigation}>
 					<li>
 						<FontAwesomeIcon icon={faTableCellsLarge} />
-						<p>Dasboard</p>
+						<p>Acasă</p>
 					</li>
 					<li>
 						<FontAwesomeIcon icon={faBookmark} />
