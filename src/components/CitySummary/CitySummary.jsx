@@ -55,9 +55,7 @@ const CitySummary = (props) => {
 			<div className={classes.summary}>
 				<div className={classes.info}>
 					<h2 className={classes.cityName}>{props.city}</h2>
-					<p className={classes.lastUpdate}>
-						Ultima actualizare : 13/04/2023 13:34
-					</p>
+					<p className={classes.lastUpdate}>Actualizat la: 13/04/2023 13:34</p>
 				</div>
 				<div className={classes.summary_parameters}>
 					<Parameter

@@ -3,7 +3,7 @@
 	padding: 1rem 2rem;
 }
 .mainCity_title {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	margin-top: 0.5rem;
 	color: #213a62;
 }
@@ -12,4 +12,7 @@
 	justify-content: space-between;
 	margin-top: 2rem;
 	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	row-gap: 20px;
 }

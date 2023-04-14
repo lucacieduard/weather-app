@@ -1,7 +1,7 @@
 .card {
 	display: flex;
 	flex-direction: column;
-	width: 180px;
+	width: 150px;
 }
 .card_title {
 	text-align: center;
@@ -13,6 +13,7 @@
 	transform: translateY(-17px);
 	transition: all 0.5s;
 	color: #2f69fd;
+	z-index: 1;
 }
 
 .active {
@@ -20,8 +21,36 @@
 	color: #2f69fd;
 }
 .card_image {
-	width: 180;
-	height: 140px;
+	width: 150px;
+	height: 120px;
 	object-fit: cover;
 	border-radius: 25px;
+}
+
+@media (min-width: 440px) {
+	.card {
+		width: 170px;
+	}
+	.card_image {
+		width: 170px;
+		height: 140px;
+	}
+}
+@media (min-width: 540px) {
+	.card {
+		width: 200px;
+	}
+	.card_image {
+		width: 200px;
+		height: 160px;
+	}
+}
+@media (min-width: 600px) {
+	.card {
+		width: 170px;
+	}
+	.card_image {
+		width: 170px;
+		height: 145px;
+	}
 }

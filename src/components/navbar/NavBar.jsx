@@ -6,15 +6,20 @@ import {
 	faUser,
 	faLocationPin,
 	faXmark,
+	faHamburger,
+	faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-const NavBar = () => {
+const NavBar = (props) => {
 	const [showlocationMessage, setShowLocationMessage] = useState(false);
 	const [showProfileMenu, setShowProfileMenu] = useState(false);
 
 	return (
 		<div className={classes.navBar}>
+			<div className={`${classes.hamburger_icon} ${classes.hide}`}>
+				<FontAwesomeIcon icon={faBars} onClick={props.showSideBar} />
+			</div>
 			<div className={classes.date}>
 				Luni<span className={classes.date_color}>4 ianuarie, 2023</span>
 			</div>
