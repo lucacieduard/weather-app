@@ -29,6 +29,26 @@ const CitySummary = (props) => {
 			lat: 45.792784,
 			lng: 24.152069,
 		},
+		Brussels: {
+			lat: 50.85045,
+			lng: 4.34878,
+		},
+		Rome: {
+			lat: 41.902782,
+			lng: 12.496366,
+		},
+		Paris: {
+			lat: 48.856613,
+			lng: 2.352222,
+		},
+		Madrid: {
+			lat: 40.416775,
+			lng: -3.70379,
+		},
+		Budapest: {
+			lat: 47.497913,
+			lng: 19.040236,
+		},
 	};
 	return (
 		<div className={classes.summary_container}>
