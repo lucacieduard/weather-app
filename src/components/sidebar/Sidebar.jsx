@@ -6,15 +6,27 @@ import {
 	faBookmark,
 	faArrowRightToBracket,
 	faUserPlus,
+	faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+	console.log(props.showNav);
 	return (
-		<div className={classes.sidebar}>
+		<div
+			className={`${classes.sidebar} ${
+				props.showNav ? "" : `${classes.hide_side}`
+			}`}
+		>
 			<div className={classes.sidebar_header}>
 				<FontAwesomeIcon icon={faCloudBolt} className={classes.logo} />
 				<h1 className={classes.logo_text}>meTEO</h1>
+				<FontAwesomeIcon
+					icon={faXmark}
+					onClick={() => props.changeShowSideBar()}
+					className={`${classes.xmark} ${classes.hide}`}
+				/>
 			</div>
 			<div className={classes.sidebar_content}>
 				<ul className={classes.sidebar_navigation}>
@@ -22,7 +34,6 @@ const Sidebar = () => {
 						to="/"
 						style={{ textDecoration: "none", color: "inherit" }}
 						className={({ isActive, isPending }) => {
-							console.log(isActive);
 							return isActive ? `${classes.activeLink}` : "";
 						}}
 					>

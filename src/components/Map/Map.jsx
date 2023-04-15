@@ -13,7 +13,7 @@ const MapC = (props) => {
 			center={[`${props.coords.lat}`, `${props.coords.lng}`]}
 			zoom={12}
 			scrollWheelZoom={true}
-			style={{ width: "100%", height: "100%" }}
+			className={classes.map}
 		>
 			<TileLayer
 				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

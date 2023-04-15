@@ -1,5 +1,6 @@
+import { useState } from "react";
 import PageContainer from "../../../UI/PageContainer/PageCointainer";
-import MainCity from "../../../components/mainCity/mainCity";
+
 import NavBar from "../../../components/navbar/NavBar";
 import Sidebar from "../../../components/sidebar/Sidebar";
 import classes from "./single.module.css";
@@ -7,12 +8,17 @@ import { useParams } from "react-router-dom";
 
 const Single = () => {
 	const { city } = useParams();
+	const [showSideBar, setShowSideBar] = useState(false);
+
+	function showSideBarHandler() {
+		setShowSideBar((prev) => !prev);
+	}
 	return (
 		<div className={classes.page}>
-			<Sidebar />
+			<Sidebar showNav={showSideBar} changeShowSideBar={showSideBarHandler} />
 			<div className={classes.container}>
 				<PageContainer>
-					<NavBar />
+					<NavBar showSideBar={showSideBarHandler} />
 					<p>Oras {city}</p>
 				</PageContainer>
 			</div>

@@ -13,6 +13,7 @@ import budapesta_img from "../../assets/image/budapesta.jpg";
 import madrid_img from "../../assets/image/madrid.jpg";
 import paris_img from "../../assets/image/paris.jpg";
 import roma_img from "../../assets/image/roma.jpg";
+import { useState } from "react";
 
 const Home = () => {
 	const romania = ["București", "Cluj Napoca", "Brașov", "Iași", "Sibiu"];
@@ -31,12 +32,18 @@ const Home = () => {
 		madrid_img,
 		budapesta_img,
 	];
+
+	const [showSideBar, setShowSideBar] = useState(false);
+
+	function showSideBarHandler() {
+		setShowSideBar((prev) => !prev);
+	}
 	return (
 		<div className={classes.page}>
-			<Sidebar />
+			<Sidebar showNav={showSideBar} changeShowSideBar={showSideBarHandler} />
 			<div className={classes.container}>
 				<PageContainer>
-					<NavBar />
+					<NavBar showSideBar={showSideBarHandler} />
 					<MainCity
 						title="Orașe din România"
 						activeCity="Sibiu"
