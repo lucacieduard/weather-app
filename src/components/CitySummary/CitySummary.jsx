@@ -13,13 +13,16 @@ import { useEffect, useState } from "react";
 import GeoConvertor from "../../utils/GeoLocationConverter";
 import coords from "../../utils/coords";
 import weatherCode from "../../utils/weatherCode";
+import Modal from "../../UI/Modal/Modal";
 
 const CitySummary = (props) => {
 	const [data, setData] = useState({});
 	const [isError, setIsError] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
 		async function FetchData() {
+			setIsLoading(true);
 			try {
 				const { city, lat, lng, countryCode } = await GeoConvertor(
 					`${props.city}`
@@ -44,7 +47,9 @@ const CitySummary = (props) => {
 					winddirection: data.current_weather.winddirection,
 					windspeed: data.current_weather.windspeed,
 				});
+				setIsLoading(false);
 			} catch (error) {
+				setIsLoading(false);
 				setIsError(true);
 				console.log(error);
 			}
@@ -58,6 +63,7 @@ const CitySummary = (props) => {
 			<div className={classes.summary}>
 				{!isError && (
 					<>
+						{isLoading && <Modal />}
 						<div className={classes.info}>
 							<h2 className={classes.cityName}>
 								{data.city} ({data.countryCode})

@@ -6,6 +6,7 @@
 
 .summary {
 	flex: 1;
+	position: relative;
 }
 .map {
 	flex: 1;
