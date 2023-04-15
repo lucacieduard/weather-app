@@ -16,7 +16,7 @@ import roma_img from "../../assets/image/roma.jpg";
 import { useState } from "react";
 
 const Home = () => {
-	const romania = ["București", "Cluj Napoca", "Brașov", "Iași", "Sibiu"];
+	const romania = ["București", "Cluj-Napoca", "Brașov", "Iași", "Sibiu"];
 	const europa = ["Brussels", "Paris", "Rome", "Madrid", "Budapest"];
 	const romania_img = [
 		bucuresti_img,

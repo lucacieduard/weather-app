@@ -8,11 +8,9 @@ import {
 	faUserPlus,
 	faXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = (props) => {
-	console.log(props.showNav);
 	return (
 		<div
 			className={`${classes.sidebar} ${

@@ -14,6 +14,7 @@ import { useState } from "react";
 const NavBar = (props) => {
 	const [showlocationMessage, setShowLocationMessage] = useState(false);
 	const [showProfileMenu, setShowProfileMenu] = useState(false);
+	console.log();
 
 	return (
 		<div className={classes.navBar}>
@@ -21,7 +22,14 @@ const NavBar = (props) => {
 				<FontAwesomeIcon icon={faBars} onClick={props.showSideBar} />
 			</div>
 			<div className={classes.date}>
-				Luni<span className={classes.date_color}>4 ianuarie, 2023</span>
+				{new Date()
+					.toLocaleDateString("ro-RO", { weekday: "long" })
+					.toLocaleUpperCase()}
+				<span className={classes.date_color}>
+					{new Date().toLocaleDateString("ro-RO", { day: "numeric" })}{" "}
+					{new Date().toLocaleDateString("ro-RO", { month: "long" })},{" "}
+					{new Date().toLocaleDateString("ro-RO", { year: "numeric" })}
+				</span>
 			</div>
 			<div className={classes.navbar_right}>
 				<div className={classes.search}>
