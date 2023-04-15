@@ -70,3 +70,20 @@
 		flex-direction: row;
 	}
 }
+@media (min-width: 950px) {
+	.info {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		row-gap: 0;
+	}
+}
+
+@media (min-width: 1200px) {
+	.codeMessage {
+		font-size: 1.1rem;
+	}
+	.button {
+		font-size: 1.1rem;
+	}
+}

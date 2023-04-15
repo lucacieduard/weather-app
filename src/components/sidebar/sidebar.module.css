@@ -1,7 +1,6 @@
 .sidebar {
 	position: absolute;
 	flex: 1;
-
 	display: flex;
 	flex-direction: column;
 	background-color: #eef2f3;
@@ -90,7 +89,7 @@
 	display: none;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
 	.sidebar {
 		position: relative;
 		min-width: 180px;

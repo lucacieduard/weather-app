@@ -51,6 +51,94 @@
 	}
 	.card_image {
 		width: 170px;
-		height: 145px;
+		height: 135px;
+	}
+}
+@media (min-width: 680px) {
+	.card {
+		width: 180px;
+	}
+	.card_image {
+		width: 180px;
+		height: 140px;
+	}
+}
+@media (min-width: 750px) {
+	.card {
+		width: 160px;
+	}
+	.card_image {
+		width: 160px;
+		height: 110px;
+	}
+}
+@media (min-width: 850px) {
+	.card {
+		width: 175px;
+	}
+	.card_image {
+		width: 175px;
+		height: 140px;
+	}
+}
+@media (min-width: 900px) {
+	.card {
+		width: 185px;
+	}
+	.card_image {
+		width: 185px;
+		height: 140px;
+	}
+}
+@media (min-width: 940px) {
+	.card {
+		width: 165px;
+	}
+	.card_image {
+		width: 165px;
+		height: 130px;
+	}
+}
+@media (min-width: 1050px) {
+	.card {
+		width: 175px;
+	}
+	.card_image {
+		width: 175px;
+		height: 140px;
+	}
+}
+@media (min-width: 1150px) {
+	.card {
+		width: 165px;
+	}
+	.card_image {
+		width: 165px;
+		height: 140px;
+	}
+}
+@media (min-width: 1250px) {
+	.card {
+		width: 175px;
+	}
+	.card_image {
+		width: 175px;
+	}
+}
+@media (min-width: 1350px) {
+	.card {
+		width: 180px;
+	}
+	.card_image {
+		width: 180px;
+	}
+}
+@media (min-width: 1500px) {
+	.card {
+		width: 190px;
+	}
+	.card_image {
+		width: 190px;
+		height: 150px;
 	}
 }

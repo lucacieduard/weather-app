@@ -1,6 +1,8 @@
 .mainCity_container {
 	width: 100%;
 	padding: 1rem 2rem;
+	max-width: 1350px;
+	margin: 0 auto;
 }
 .mainCity_title {
 	font-size: 1.4rem;
@@ -15,4 +17,10 @@
 	flex-wrap: wrap;
 	gap: 10px;
 	row-gap: 20px;
+}
+
+@media (min-width: 950px) {
+	.mainCity_title {
+		font-size: 1.6rem;
+	}
 }
