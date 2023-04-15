@@ -17,7 +17,6 @@
 	justify-content: space-between;
 	margin: 2rem 0;
 	flex-wrap: wrap;
-	padding-right: 1rem;
 }
 
 .info {
@@ -68,8 +67,10 @@
 @media (min-width: 800px) {
 	.summary_container {
 		flex-direction: row;
+		gap: 1rem;
 	}
 }
+
 @media (min-width: 950px) {
 	.info {
 		flex-direction: row;

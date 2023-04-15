@@ -119,15 +119,20 @@
 	border-radius: 5px;
 }
 
-@media (min-width: 950px) {
-	.hide {
-		display: none;
+@media (min-width: 700px) {
+	.search input {
+		width: 170px;
 	}
+}
 
+@media (min-width: 800px) {
 	.date {
 		display: inherit;
 	}
-	.search input {
-		width: 170px;
+}
+
+@media (min-width: 950px) {
+	.hide {
+		display: none;
 	}
 }
