@@ -1,7 +1,9 @@
+import { layer } from "@fortawesome/fontawesome-svg-core";
+
 const CoordsToCity = async (lat, lng) => {
 	try {
 		const response = await fetch(
-			`https://geocode.maps.co/reverse?lat=46.5666048&lon=26.9156352`
+			`https://geocode.maps.co/reverse?lat=${lat}&lon=${lng}`
 		);
 		if (!response.ok) throw new Error();
 		const data = await response.json();

@@ -33,7 +33,11 @@ const GeoLocationPiker = () => {
 			<FontAwesomeIcon icon={faLocationPin} />
 			{showlocationMessage && (
 				<p className={classes.use_location_message}>
-					Folosește locația actuală
+					{`${
+						declineLocation
+							? "Acces la locație respins"
+							: "Folosește locația actuală"
+					}`}
 				</p>
 			)}
 		</div>
