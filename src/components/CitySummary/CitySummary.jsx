@@ -35,7 +35,6 @@ const CitySummary = (props) => {
 				const data = await response.json();
 
 				const arr = data.current_weather.time.split("T");
-				console.log(arr);
 				setData({
 					city: city,
 					lat,
