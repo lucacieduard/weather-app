@@ -28,7 +28,7 @@ const InputSearch = () => {
 				throw Error("Nu am gasit niciun oraș cu acest nume, reformuleaza");
 			}
 			setError(false);
-			console.log(data);
+
 			const city_list = data.results.map((city) => {
 				return (
 					<li

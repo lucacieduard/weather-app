@@ -1,5 +1,3 @@
-import { layer } from "@fortawesome/fontawesome-svg-core";
-
 const CoordsToCity = async (lat, lng) => {
 	try {
 		const response = await fetch(

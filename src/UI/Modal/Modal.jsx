@@ -2,8 +2,8 @@ import classes from "./modal.module.css";
 
 const Modal = () => {
 	return (
-		<div class={classes.spinner_container}>
-			<div class={classes.lds_ring}>
+		<div className={classes.spinner_container}>
+			<div className={classes.lds_ring}>
 				<div></div>
 				<div></div>
 				<div></div>
