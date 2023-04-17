@@ -9,8 +9,7 @@ import {
 	faHamburger,
 	faBars,
 } from "@fortawesome/free-solid-svg-icons";
-import { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import InputSearch from "./InputSearch";
 
 const NavBar = (props) => {

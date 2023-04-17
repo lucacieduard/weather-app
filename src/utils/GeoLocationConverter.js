@@ -1,6 +1,6 @@
 export default async function GeoConvertor(cityName) {
 	const response = await fetch(
-		`https://geocoding-api.open-meteo.com/v1/search?name=${cityName}&count=1&language=en&format=json`
+		`https://geocoding-api.open-meteo.com/v1/search?name=${cityName}&count=1&language=ro&format=json`
 	);
 
 	const { results } = await response.json();

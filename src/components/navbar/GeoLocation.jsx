@@ -14,7 +14,6 @@ const GeoLocationPiker = () => {
 		navigator.geolocation.getCurrentPosition(
 			async (position) => {
 				const { latitude, longitude } = position.coords;
-				console.log(latitude, longitude);
 				const city = await CoordsToCity(latitude, longitude);
 				if (city) {
 					navigate(`/${city}/acum`);
@@ -22,7 +21,8 @@ const GeoLocationPiker = () => {
 			},
 			(error) => {
 				setDeclineLocation(true);
-			}
+			},
+			{ enableHighAccuracy: false }
 		);
 	return (
 		<div
