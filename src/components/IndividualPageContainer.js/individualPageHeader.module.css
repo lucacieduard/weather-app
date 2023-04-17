@@ -1,0 +1,57 @@
+.activeLink {
+	border-bottom: 3px solid #403492;
+}
+
+.cityName {
+	color: #213a62;
+	font-size: 1.1rem;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1rem 2rem;
+	margin-top: 1rem;
+	border-bottom: 1px solid rgb(220, 215, 215);
+}
+
+.navList {
+	display: flex;
+}
+
+.navItem {
+	font-size: 0.9rem;
+	padding: 0.5rem 0.5rem;
+	height: 100%;
+}
+
+.navItem:hover {
+	background-color: rgb(220, 215, 215);
+}
+
+@media (min-width: 500px) {
+	.cityName {
+		font-size: 1.3rem;
+	}
+	.navItem {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 800px) {
+	.cityName {
+		font-size: 1.45rem;
+	}
+	.navItem {
+		font-size: 1rem;
+	}
+}
+@media (min-width: 1000px) {
+	.cityName {
+		font-size: 1.6rem;
+	}
+	.navItem {
+		font-size: 1.1rem;
+	}
+}
