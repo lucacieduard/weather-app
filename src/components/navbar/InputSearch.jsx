@@ -17,7 +17,7 @@ const InputSearch = () => {
 	const changeHandler = async (ref) => {
 		try {
 			const response = await fetch(
-				`https://geocoding-api.open-meteo.com/v1/search?name=${ref}&count=3&language=en&format=json`
+				`https://geocoding-api.open-meteo.com/v1/search?name=${ref}&count=3&language=ro&format=json`
 			);
 			if (!response.ok) {
 				throw Error();
