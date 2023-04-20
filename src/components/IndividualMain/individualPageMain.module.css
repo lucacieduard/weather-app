@@ -1,0 +1,31 @@
+.info {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+@media (min-width: 800px) {
+	.main {
+		flex-direction: row;
+		gap: 10px;
+	}
+	.info_container {
+		width: 100%;
+	}
+
+	.map {
+		width: 100%;
+	}
+}
+
+@media (min-width: 1450px) {
+	.info_container {
+		min-height: 100%;
+	}
+}

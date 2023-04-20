@@ -1,0 +1,19 @@
+.chart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 200px;
+}
+
+@media (min-width: 630px) {
+	.chart {
+		width: 50%;
+	}
+}
+
+@media (min-width: 1400px) {
+	.chart {
+		min-height: 280px;
+	}
+}

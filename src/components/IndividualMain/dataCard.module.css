@@ -1,0 +1,93 @@
+.card {
+	background-color: #eef2f3;
+	padding: 0.5rem 0.7rem;
+	border-radius: 5px;
+	flex: 1;
+	height: fit-content;
+	min-width: 130px;
+	min-height: 80px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.name {
+	font-size: 0.9rem;
+	color: #818181;
+	text-align: center;
+}
+
+.card_info {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 0.4rem;
+	justify-content: center;
+}
+
+.icon {
+	width: 25px;
+	height: 25px;
+	color: #2f69fd;
+}
+
+.parameter_value {
+	color: #213a62;
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+@media (min-width: 450px) {
+	.name {
+		font-size: 1rem;
+	}
+
+	.parameter_value {
+		font-size: 1.2rem;
+	}
+	.icon {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+@media (min-width: 500px) {
+	.card {
+		min-width: 150px;
+	}
+}
+
+@media (min-width: 750px) {
+	.name {
+		font-size: 1rem;
+	}
+	.parameter_value {
+		font-size: 1.3rem;
+	}
+
+	.icon {
+		width: 35px;
+		height: 35px;
+	}
+}
+
+@media (min-width: 1300px) {
+	.name {
+		font-size: 1rem;
+	}
+	.parameter_value {
+		font-size: 1.4rem;
+		gap: 3px;
+	}
+
+	.icon {
+		width: 30px;
+		height: 30px;
+	}
+	.card_info {
+		gap: 14px;
+	}
+}
