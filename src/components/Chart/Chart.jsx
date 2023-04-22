@@ -32,9 +32,17 @@ export default function Chart(props) {
 			intersect: false,
 			mode: "index",
 		},
+		scales: {
+			x: {
+				ticks: {
+					display: props.displayX,
+				},
+			},
+		},
 		plugins: {
 			legend: {
 				position: "none",
+				size: 10,
 			},
 			title: {
 				display: true,

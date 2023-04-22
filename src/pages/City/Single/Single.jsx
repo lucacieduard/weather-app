@@ -26,7 +26,6 @@ const Single = () => {
 		try {
 			const data = await GeoConvertor(city);
 
-			console.log(data);
 			const response = await fetch(
 				`https://api.open-meteo.com/v1/forecast?latitude=${data.lat}&longitude=${data.lng}&hourly=temperature_2m,relativehumidity_2m,precipitation,surface_pressure&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max&current_weather=true&forecast_days=1&timezone=Europe%2FBucharest`
 			);
@@ -82,21 +81,25 @@ const Single = () => {
 										label={data.labelTime}
 										title="Temperatură (°C)"
 										data={data.weatherData.hourly.temperature_2m}
+										displayX={true}
 									/>
 									<Chart
 										label={data.labelTime}
 										title="Umiditate %"
 										data={data.weatherData.hourly.relativehumidity_2m}
+										displayX={true}
 									/>
 									<Chart
 										label={data.labelTime}
 										title="Precipitații (mm)"
 										data={data.weatherData.hourly.precipitation}
+										displayX={true}
 									/>
 									<Chart
 										label={data.labelTime}
 										title="Presiune (hPa)"
 										data={data.weatherData.hourly.surface_pressure}
+										displayX={true}
 									/>
 								</div>
 							</IndividualPageContainer>
