@@ -1,4 +1,18 @@
-const weatherCode = {
+import {
+	faCloud,
+	faCloudBolt,
+	faCloudMeatball,
+	faCloudRain,
+	faCloudShowersHeavy,
+	faCloudSun,
+	faCloudSunRain,
+	faSmog,
+	faSnowflake,
+	faSun,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export const weatherCode = {
 	0: "Cer senin",
 	1: "Senin",
 	2: "Parțial înnorat",
@@ -28,5 +42,3 @@ const weatherCode = {
 	96: "Furtună cu grindină ușoară",
 	99: "Furtună cu grindină puternică",
 };
-
-export default weatherCode;

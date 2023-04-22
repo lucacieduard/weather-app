@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import GeoConvertor from "../../utils/GeoLocationConverter";
 import coords from "../../utils/coords";
-import weatherCode from "../../utils/weatherCode";
+import { weatherCode } from "../../utils/weatherCode";
 import Modal from "../../UI/Modal/Modal";
 
 const CitySummary = (props) => {
