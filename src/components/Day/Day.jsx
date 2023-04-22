@@ -18,6 +18,7 @@ import {
 import Hour from "./Hour";
 import { weatherCode } from "../../utils/weatherCode";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 const weatherIcons = {
 	0: <FontAwesomeIcon icon={faSun} className={classes.hide} />,
 	1: <FontAwesomeIcon icon={faSun} className={classes.hide} />,
