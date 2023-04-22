@@ -88,6 +88,7 @@
 	border: 1px solid #eef2f3;
 	display: flex;
 	flex-direction: column;
+	z-index: 999;
 }
 
 .profile_name {

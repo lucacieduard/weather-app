@@ -1,6 +1,7 @@
 .main {
-	min-height: 100vh;
 	overflow-y: auto;
+	min-height: 100vh;
+	max-height: 100vh;
 	padding-bottom: 1rem;
 	position: relative;
 }
