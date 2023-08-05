@@ -1,34 +1,26 @@
-.page {
-	display: flex;
-}
-
-.container {
-	flex: 6;
-}
-
 .Chartcontainer {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
-	row-gap: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  row-gap: 10px;
 }
 
 .title {
-	font-size: 1.1rem;
-	margin-top: 1.5rem;
-	border-bottom: 1px solid rgb(220, 215, 215);
-	color: #213a62;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid rgb(220, 215, 215);
+  color: #213a62;
 }
 
 @media (min-width: 500px) {
-	.title {
-		font-size: 1.3rem;
-	}
+  .title {
+    font-size: 1.3rem;
+  }
 }
 @media (min-width: 1000px) {
-	.title {
-		font-size: 1.45rem;
-	}
+  .title {
+    font-size: 1.45rem;
+  }
 }

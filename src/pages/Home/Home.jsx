@@ -13,53 +13,41 @@ import budapesta_img from "../../assets/image/budapesta.jpg";
 import madrid_img from "../../assets/image/madrid.jpg";
 import paris_img from "../../assets/image/paris.jpg";
 import roma_img from "../../assets/image/roma.jpg";
-import { useState } from "react";
 
 const Home = () => {
-	const romania = ["București", "Cluj-Napoca", "Brașov", "Iași", "Sibiu"];
-	const europa = ["Brussels", "Paris", "Rome", "Madrid", "Budapest"];
-	const romania_img = [
-		bucuresti_img,
-		cluj_img,
-		brasov_img,
-		iasi_img,
-		sibiu_img,
-	];
-	const europa_img = [
-		bruxelles_img,
-		paris_img,
-		roma_img,
-		madrid_img,
-		budapesta_img,
-	];
+  const romania = ["București", "Cluj-Napoca", "Brașov", "Iași", "Sibiu"];
+  const europa = ["Brussels", "Paris", "Rome", "Madrid", "Budapest"];
+  const romania_img = [
+    bucuresti_img,
+    cluj_img,
+    brasov_img,
+    iasi_img,
+    sibiu_img,
+  ];
+  const europa_img = [
+    bruxelles_img,
+    paris_img,
+    roma_img,
+    madrid_img,
+    budapesta_img,
+  ];
 
-	const [showSideBar, setShowSideBar] = useState(false);
-
-	function showSideBarHandler() {
-		setShowSideBar((prev) => !prev);
-	}
-	return (
-		<div className={classes.page}>
-			<Sidebar showNav={showSideBar} changeShowSideBar={showSideBarHandler} />
-			<div className={classes.container}>
-				<PageContainer>
-					<NavBar showSideBar={showSideBarHandler} />
-					<MainCity
-						title="Orașe din România"
-						activeCity="Sibiu"
-						orase={romania}
-						imagini={romania_img}
-					/>
-					<MainCity
-						title="Orașe din Europa"
-						activeCity="Rome"
-						orase={europa}
-						imagini={europa_img}
-					/>
-				</PageContainer>
-			</div>
-		</div>
-	);
+  return (
+    <>
+      <MainCity
+        title="Orașe din România"
+        activeCity="Sibiu"
+        orase={romania}
+        imagini={romania_img}
+      />
+      <MainCity
+        title="Orașe din Europa"
+        activeCity="Rome"
+        orase={europa}
+        imagini={europa_img}
+      />
+    </>
+  );
 };
 
 export default Home;
