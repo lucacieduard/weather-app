@@ -11,7 +11,6 @@ import AuthContext from "../../context/AuthContext";
 const NavBar = (props) => {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const { user } = useContext(AuthContext);
-  console.log(user);
 
   return (
     <div className={classes.navBar}>

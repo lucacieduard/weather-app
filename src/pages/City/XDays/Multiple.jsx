@@ -21,14 +21,12 @@ const MultiplePage = () => {
       try {
         setLoading(true);
         const geolocationData = await GeoConvertor(params.city);
-        console.log(geolocationData);
         const response = await fetch(
           `https://api.open-meteo.com/v1/forecast?latitude=${geolocationData.lat}&longitude=${geolocationData.lng}&hourly=temperature_2m,relativehumidity_2m,windspeed_10m,precipitation_probability,weathercode&daily=precipitation_probability_mean	,weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum&forecast_days=${params.days}&timezone=Europe%2FBucharest`
         );
 
         if (!response.ok) throw new Error("Eroare API");
         const data = await response.json();
-        console.log(data);
         const dates = data.daily.time.map(
           (date) => `${date.split("-")[2]}/${date.split("-")[1]}`
         );

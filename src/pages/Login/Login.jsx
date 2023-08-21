@@ -15,7 +15,6 @@ const Login = () => {
 
     try {
       const response = await signInWithEmailAndPassword(auth, email, parola);
-      console.log(response);
       navigate("/");
       toast.success(`Bine ai revenit`, {
         position: "bottom-right",

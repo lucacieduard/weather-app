@@ -11,7 +11,6 @@ import Modal from "../../../UI/Modal/Modal";
 const Single = () => {
   const { city } = useParams();
   const [loading, setLoading] = useState(true);
-  console.log(city);
   const [data, setData] = useState({});
 
   async function FetchData() {
@@ -26,7 +25,6 @@ const Single = () => {
         throw new Error("Eroare API");
       }
       const allData = await response.json();
-      console.log(allData);
       const labelTime = allData.hourly.time.map((date) => date.split("T")[1]);
       setData({
         city: data.city,

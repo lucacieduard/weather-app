@@ -12,6 +12,7 @@ import roma_img from "../../assets/image/roma.jpg";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import Modal from "../../UI/Modal/Modal";
+import FavoriteCity from "../../components/FavoriteCity/FavoriteCity";
 
 const Home = () => {
   const romania = ["București", "Cluj-Napoca", "Brașov", "Iași", "Sibiu"];
@@ -32,12 +33,11 @@ const Home = () => {
   ];
 
   const { user, loading } = useContext(AuthContext);
-  console.log(loading);
   return loading ? (
     <Modal />
   ) : (
     <>
-      {user && <h1>Oras favorit : {user.oras}</h1>}
+      {user && <FavoriteCity city={user.oras} />}
       <MainCity
         title="Orașe din România"
         activeCity="Sibiu"
