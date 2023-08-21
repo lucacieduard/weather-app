@@ -1,8 +1,4 @@
-import classes from "./home.module.css";
-import NavBar from "../../components/navbar/NavBar";
-import Sidebar from "../../components/sidebar/Sidebar";
 import MainCity from "../../components/mainCity/mainCity";
-import PageContainer from "../../UI/PageContainer/PageCointainer";
 import bucuresti_img from "../../assets/image/bucuresti.jpg";
 import brasov_img from "../../assets/image/brasov.jpg";
 import sibiu_img from "../../assets/image/sibiu.jpg";
@@ -13,6 +9,9 @@ import budapesta_img from "../../assets/image/budapesta.jpg";
 import madrid_img from "../../assets/image/madrid.jpg";
 import paris_img from "../../assets/image/paris.jpg";
 import roma_img from "../../assets/image/roma.jpg";
+import { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
+import Modal from "../../UI/Modal/Modal";
 
 const Home = () => {
   const romania = ["București", "Cluj-Napoca", "Brașov", "Iași", "Sibiu"];
@@ -32,8 +31,13 @@ const Home = () => {
     budapesta_img,
   ];
 
-  return (
+  const { user, loading } = useContext(AuthContext);
+  console.log(loading);
+  return loading ? (
+    <Modal />
+  ) : (
     <>
+      {user && <h1>Oras favorit : {user.oras}</h1>}
       <MainCity
         title="Orașe din România"
         activeCity="Sibiu"

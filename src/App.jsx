@@ -7,6 +7,11 @@ import Sidebar from "./components/sidebar/Sidebar";
 import { useState } from "react";
 import PageContainer from "./UI/PageContainer/PageCointainer";
 import NavBar from "./components/navbar/NavBar";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import { AuthContextPorvider } from "./context/AuthContext";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [showSideBar, setShowSideBar] = useState(false);
@@ -15,31 +20,37 @@ function App() {
     setShowSideBar((prev) => !prev);
   }
   return (
-    <div className={classes.page}>
-      <BrowserRouter>
-        <Sidebar showNav={showSideBar} changeShowSideBar={showSideBarHandler} />
-        <div className={classes.container}>
-          <PageContainer>
-            <NavBar showSideBar={showSideBarHandler} />
+    <AuthContextPorvider>
+      <div className={classes.page}>
+        <BrowserRouter>
+          <Sidebar
+            showNav={showSideBar}
+            changeShowSideBar={showSideBarHandler}
+          />
+          <div className={classes.container}>
+            <PageContainer>
+              <NavBar showSideBar={showSideBarHandler} />
 
-            <Routes>
-              <Route path="/">
-                <Route index element={<Home />} />
-                <Route path=":city">
-                  <Route path="acum" element={<Single />} />
-                  <Route path=":days">
-                    <Route path="zile" element={<MultiplePage />} />
+              <Routes>
+                <Route path="/">
+                  <Route index element={<Home />} />
+                  <Route path=":city">
+                    <Route path="acum" element={<Single />} />
+                    <Route path=":days">
+                      <Route path="zile" element={<MultiplePage />} />
+                    </Route>
                   </Route>
                 </Route>
-              </Route>
-              <Route path="/conectare" element={<p>login page</p>} />
-              <Route path="/inregistrare" element={<p>register page</p>} />
-              <Route path="*" element={<p>no match</p>} />
-            </Routes>
-          </PageContainer>
-        </div>
-      </BrowserRouter>
-    </div>
+                <Route path="/conectare" element={<Login />} />
+                <Route path="/inregistrare" element={<Register />} />
+                <Route path="*" element={<p>no match</p>} />
+              </Routes>
+            </PageContainer>
+          </div>
+        </BrowserRouter>
+        <ToastContainer />
+      </div>
+    </AuthContextPorvider>
   );
 }
 
